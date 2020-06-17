@@ -1,6 +1,6 @@
 provider "aws" {
   region   = "ap-south-1"
-  profile  = "anubhav"
+  profile  = "abhay"
 }
 
 resource "tls_private_key" task1_p_key  {
@@ -118,7 +118,7 @@ provisioner "remote-exec" {
       "sudo mkfs.ext4  /dev/xvdh",
       "sudo mount  /dev/xvdh  /var/www/html",
       "sudo rm -rf /var/www/html/*",
-      "sudo git clone https://github.com/anubhav1626/hybrid-task1.git /var/www/html/"
+      "sudo git clone https://github.com/srabhayraj/hybrid-task1.git /var/www/html/"
     ]
   }
 }
@@ -151,7 +151,7 @@ depends_on = [
 #To upload data to S3 bucket
 resource "null_resource" "remove_and_upload_to_s3" {
   provisioner "local-exec" {
-    command ="C:/Users/91989/Desktop/terraform/hybrid-task1-master/index.html"
+    command ="C:/Users/abhay/Desktop/terraform/hybrid-task1-master/index.html"
 }	
 depends_on = [
    aws_s3_bucket.my-terraform-bucket-78965,
