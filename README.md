@@ -20,6 +20,3 @@ Copy the github repo code into /var/www/html
 Create S3 bucket, and copy/deploy the images from github repo into the s3 bucket and change the permission to public readable.
 
 8 Create a Cloudfront using s3 bucket(which contains images) and use the Cloudfront URL to update in code in /var/www/html
-
-
-Article Link : - https://www.linkedin.com/pulse/automated-infrastructure-setup-using-aws-cloud-terraform-pahwa
