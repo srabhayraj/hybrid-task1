@@ -1,3 +1,6 @@
+Given below are the step-wise explanation for AUTOMATED INFRASTRUCTURE SETUP BY USING AWS CLOUD AND TERRAFORM...
+
+
 Step1: Login to your profile created in a specific region.
 
 provider "aws" {
