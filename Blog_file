@@ -1,6 +1,7 @@
 Given below are the step-wise explanation for AUTOMATED INFRASTRUCTURE SETUP BY USING AWS CLOUD AND TERRAFORM...
 
 
+
 Step1: Login to your profile created in a specific region.
 
 provider "aws" {
@@ -20,6 +21,7 @@ resource "aws_key_pair" "task1-key" {
 }
 
 Now the key-pair is generated, and we use this key-pair to launch the instance.
+
 
 Step3: Create the security group which allow port 80.
 
@@ -64,6 +66,7 @@ resource "aws_security_group" "task1-sg" {
 
 The security group is created which will allow HTTP request and ssh requests coming from the clients, we use this security group while launching the instance.
 
+
 Step4: Launching the EC2 Instance using the keypair and security group that we have created in step2 and step3.
 
 resource "aws_instance" "task1-inst" {
@@ -96,6 +99,7 @@ tags = {
 
 This will create the instance with tag name- "task1-inst" and connect us to it so as we can remote execute the and install the required programs we need -> yum command to install httpd , php , and git.
 
+
 Step 5: Now creating an EBS volume of size 1 GB.
 
 resource "aws_ebs_volume" "task1-ebs" {
@@ -118,6 +122,7 @@ resource "aws_volume_attachment" "task1-attach" {
 }
 
 The volume is created and attached to the instance.
+
 
 Step 6:  After the EBS volume attached , Now mounting the EBS volume with the /var/www/html and copying the code from git-hub to the /var/www/html .
 
